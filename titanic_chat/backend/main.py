@@ -4,9 +4,25 @@ import google.generativeai as genai
 import matplotlib.pyplot as plt
 import seaborn as sns   
 import os
-
 import pandas as pd
+from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI()
+
+# Allow frontend (Streamlit Cloud) to access FastAPI backend
+origins = [
+    "https://aicaptainchatbot-sanchit31.streamlit.app",  # Your deployed Streamlit app
+    "http://localhost",  # For local testing
+    "http://127.0.0.1",  # Local testing
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,  # Allow only specific origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all HTTP methods
+    allow_headers=["*"],  # Allow all headers
+)
                         
 df = pd.read_csv("./dataset/clean_titanic_dataset.csv")
 
