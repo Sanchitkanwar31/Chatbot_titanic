@@ -30,6 +30,16 @@
 import streamlit as st
 import requests
 
+import os
+import streamlit as st
+
+# Ensure secrets are loaded
+if "GEMINI_API_KEY" not in st.secrets:
+    st.error("GEMINI_API_KEY is missing in Streamlit secrets!")
+else:
+    GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+
+
 st.title("⚓ AI Titanic Captain")
 
 
