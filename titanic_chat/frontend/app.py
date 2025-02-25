@@ -3,8 +3,7 @@
 
 # st.title("⚓ AI Titanic Captain")
 
-# BASE_URL = "http://127.0.0.1:8000"
-
+#.
 # # fetch data from /summary/ url
 # if st.sidebar.button("Show Dataset Summary"):
 #     res = requests.get(f"{BASE_URL}/summary/").json()
