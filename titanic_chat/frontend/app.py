@@ -34,26 +34,21 @@ import os
 import streamlit as st
 
 # Ensure secrets are loaded
-if "GEMINI_API_KEY" not in st.secrets:
-    st.error("GEMINI_API_KEY is missing in Streamlit secrets!")
-else:
-    GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+# if "GEMINI_API_KEY" not in st.secrets:
+#     st.error("GEMINI_API_KEY is missing in Streamlit secrets!")
+# else:
+#     GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 
 
 st.title("⚓ AI Titanic Captain")
 
 
-# Ensure secrets are loaded
-if "GEMINI_API_KEY" not in st.secrets:
-    st.error("GEMINI_API_KEY is missing in Streamlit secrets!")
-else:
-    GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 
 
 
-# BASE_URL = "http://127.0.0.1:8000"
+BASE_URL = "http://127.0.0.1:8000"
 
-BASE_URL = "https://aicaptainchatbot-sanchit31.herokuapp.com"
+#BASE_URL = "https://aicaptainchatbot-sanchit31.herokuapp.com"
 
 #fetch data from /summary/ url
 if st.sidebar.button("Show Dataset Summary"):
