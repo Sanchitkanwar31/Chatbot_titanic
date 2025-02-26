@@ -41,6 +41,6 @@ def query_titanic_data(question):
 
 
     prompt = f"In this Titanic dataset: {question}"
-    model = genai.GenerativeModel("gemini-pro")
+    model = genai.GenerativeModel("gemini-1.5-pro")  
     response = model.generate_content(prompt)
     return response.text, visualization
