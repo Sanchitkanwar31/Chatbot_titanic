@@ -47,3 +47,6 @@ def dataset_summary():
         #"class_distribution": df["Pclass "].value_counts().to_dict()
     }
     return summary
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
