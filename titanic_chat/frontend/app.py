@@ -62,7 +62,7 @@ if st.sidebar.button("Show Dataset Summary"):
 
 query = st.text_input("Ask me anything about the Titanic dataset")  
 if st.button("Submit"):
-    response = requests.get(f"{BASE_URL}/query/?question={query}").json()
+    response = requests.get(f"https://chatbot-titanic.onrender.com/query/?question={query}").json()
 
     st.write(response["response"])
 
