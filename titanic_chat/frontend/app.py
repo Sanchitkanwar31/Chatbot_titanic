@@ -45,9 +45,9 @@ st.title("⚓ AI Titanic Captain")
 
 
 
-BASE_URL = "http://127.0.0.1:8000"
+#BASE_URL = "http://127.0.0.1:8000"
 
-#BASE_URL = "https://aicaptainchatbot-sanchit31.herokuapp.com"
+BASE_URL = "https://chatbot-titanic.onrender.com/"
 
 #fetch data from /summary/ url
 if st.sidebar.button("Show Dataset Summary"):
@@ -62,7 +62,7 @@ if st.sidebar.button("Show Dataset Summary"):
 
 query = st.text_input("Ask me anything about the Titanic dataset")  
 if st.button("Submit"):
-    response = requests.get(f"http://127.0.0.1:8000/query/?question={query}").json()
+    response = requests.get(f"{BASE_URL}/query/?question={query}").json()
 
     st.write(response["response"])
 
